@@ -3,6 +3,36 @@
 
 using namespace std;
 
+int getMax(int num1, int num2, int num3) {
+    int result;
+    if(num1>num2) {
+        result = num1;
+        if(result>num3) {
+            result = result;
+        } else {
+            result = num3;
+        }
+    } else {
+        result = num2;
+        if(result>num3) {
+            result = result;
+        } else {
+            result = num3;
+        }
+    }
+
+    return result;
+    }
+
+
+
+int main() {
+    cout<< getMax(25,20,15);
+
+return 0;
+}
+
+/*
 //If statements
 
 int main()
@@ -25,7 +55,6 @@ int main()
     return 0;
 }
 
-/*
 //Return statement:
 double cube(double num) {
     cout<< "Hello"<<endl;
