@@ -3,15 +3,28 @@
 
 using namespace std;
 
+//Function must declared before using.
+void sayHi(string name,int age) {
+cout <<"Hello "<< name<< ", you're " <<age<<" years old"<<endl;
+}
+
 int main()
 {
-    //Arrays:
-    int fibbo[] = {0,1,3,4,7,11,18};
-    cout<< fibbo[2];
-    fibbo[2] = 15;
-    cout<<fibbo[2];
+    //Function:
+    sayHi("Vy", 30);
+    sayHi("Su",32);
+    sayHi("Ha", 4);
 
     /*
+    //Arrays:
+    int fibbo[] = {0,1,3,4,7,11,18};
+    cout<< fibbo[2]<<endl; // 3
+    fibbo[2] = 15;
+    cout<<fibbo[2]; //15
+
+    int luckyNum[20]; //Create an empty Array with the range of 20
+    luckyNum[0] = 100; //Assign the value of array at pos 1
+
     //Build a Mad Libs Game:
     string color,pluralNoun,celebrity;
     cout<<"Enter a color: ";
