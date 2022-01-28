@@ -1,4 +1,5 @@
 # depslib dependency file v1.0
-1642564071 source:c:\users\g1100_000\desktop\datastructure\c++\cplus\main.cpp
+1643341090 source:c:\users\g1100_000\desktop\datastructure\c++\cplus\main.cpp
 	<iostream>
+	<cmath>
 

@@ -5,6 +5,13 @@ using namespace std;
 
 int main()
 {
+    //Arrays:
+    int fibbo[] = {0,1,3,4,7,11,18};
+    cout<< fibbo[2];
+    fibbo[2] = 15;
+    cout<<fibbo[2];
+
+    /*
     //Build a Mad Libs Game:
     string color,pluralNoun,celebrity;
     cout<<"Enter a color: ";
@@ -19,7 +26,6 @@ int main()
     cout<<"I love " <<celebrity<<endl;
 
 
-    /*
     //Add two input numbers:
     int num1,num2;
     cout<< "Enter first number: ";
