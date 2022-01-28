@@ -3,8 +3,30 @@
 
 using namespace std;
 
-//Return statement:
+//If statements
 
+int main()
+{
+    bool isMale = false;
+    bool isTall = true;
+
+    if(isMale && isTall) {
+        cout <<"You are a tall male";
+    } else if(isMale && !isTall) {
+        cout <<"You are not a tall male";
+
+    } else if(!isMale && isTall) {
+        cout <<"You are tall but not male";
+    } else{
+        cout <<"You are not male and not tall";
+    }
+
+
+    return 0;
+}
+
+/*
+//Return statement:
 double cube(double num) {
     cout<< "Hello"<<endl;
     return num * num *num;
@@ -15,7 +37,6 @@ int main() {
 return 0;
 }
 
-/*
 //Function must declared before using.
 void sayHi(string name,int age) {
 cout <<"Hello "<< name<< ", you're " <<age<<" years old"<<endl;
