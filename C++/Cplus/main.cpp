@@ -5,6 +5,19 @@ using namespace std;
 
 int main()
 {
+    string name;
+    cout << "Enter your name: ";
+    getline(cin,name); //Use to get string of text
+
+    cout<< "You are "<< name ;
+
+
+    /*
+    int age;
+    cout<< "Enter your age: ";
+    cin>> age; //cin to receiver number and character
+
+    cout << "You are " << age << "years old";
     //Working with Number:
     cout << 5; //return 5
     cout << 5+7; //return 12
@@ -29,7 +42,6 @@ int main()
     cout<<fmin(3,10); //return the smaller
 
 
-    /*
     //Working with String:
     string phrase = "HCMUT";
     cout << phrase.length()<<endl; //Return 5
