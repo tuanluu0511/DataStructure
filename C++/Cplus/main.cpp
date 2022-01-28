@@ -5,6 +5,15 @@ using namespace std;
 
 int main()
 {
+    //Add two input numbers:
+    int num1,num2;
+    cout<< "Enter first number: ";
+    cin>>num1;
+    cout<<"Enter second number: ";
+    cin>>num2;
+    cout<< num1+num2;
+
+    /*
     string name;
     cout << "Enter your name: ";
     getline(cin,name); //Use to get string of text
@@ -12,7 +21,6 @@ int main()
     cout<< "You are "<< name ;
 
 
-    /*
     int age;
     cout<< "Enter your age: ";
     cin>> age; //cin to receiver number and character
