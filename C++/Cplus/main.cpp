@@ -3,6 +3,19 @@
 
 using namespace std;
 
+//Return statement:
+
+double cube(double num) {
+    cout<< "Hello"<<endl;
+    return num * num *num;
+}
+
+int main() {
+    cout<< cube(2);
+return 0;
+}
+
+/*
 //Function must declared before using.
 void sayHi(string name,int age) {
 cout <<"Hello "<< name<< ", you're " <<age<<" years old"<<endl;
@@ -15,7 +28,6 @@ int main()
     sayHi("Su",32);
     sayHi("Ha", 4);
 
-    /*
     //Arrays:
     int fibbo[] = {0,1,3,4,7,11,18};
     cout<< fibbo[2]<<endl; // 3
@@ -114,5 +126,6 @@ int main()
     cout << "I have an old friend named " <<friendName << endl;
     cout << ""<<friendName<<" is a "<< friendJob << endl;
     cout << "He's "<< friendAge <<" years old now" << endl;
-    cout << "But "<<friendName<<" does not look like "<<friendAge<<" !" << endl;*/
+    cout << "But "<<friendName<<" does not look like "<<friendAge<<" !" << endl;
 }
+    */
