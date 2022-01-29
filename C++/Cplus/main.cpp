@@ -3,6 +3,20 @@
 
 using namespace std;
 
+//For loop:
+
+int main() {
+
+   int nums[] = {2,3,4,5,6,7};
+   for( int i = 0;i<=5;i++) {
+    cout<<nums[i]<<endl;
+   }
+
+
+return 0;
+}
+
+/*
 //Build a guessing game:
 int main() {
 int secretNum = 7;
@@ -24,7 +38,6 @@ return 0;
 }
 
 
-/*
 //While loop:
 int main() {
 
