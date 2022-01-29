@@ -3,6 +3,48 @@
 
 using namespace std;
 
+//Switch statement:
+string getDayOfWeek(int dayNum) {
+    string dayName;
+
+    switch(dayNum) {
+case 0:
+    dayName= "Sunday";
+    break;
+case 1:
+    dayName= "Monday";
+    break;
+    case 2:
+    dayName= "Tuesday";
+    break;
+    case 3:
+    dayName= "Wednesday";
+    break;
+    case 4:
+    dayName= "Thursday";
+    break;
+    case 5:
+    dayName= "Friday";
+    break;
+    case 6:
+    dayName= "Saturday";
+    break;
+    default:
+        dayName = "Invalid day number";
+
+    }
+
+    return dayName;
+}
+
+
+int main() {
+
+cout<< getDayOfWeek(1);
+return 0;
+}
+
+/*
 <<<<<<< HEAD
 //Build a better calculator:
 int main() {
@@ -33,7 +75,6 @@ int main() {
     return 0;
 }
 
-/*
 int getMax(int num1, int num2, int num3) {
     int result;
     //Or if(num1>=num2 && num1>=num3) {result=num1}
