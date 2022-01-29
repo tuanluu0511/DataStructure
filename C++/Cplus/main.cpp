@@ -3,17 +3,52 @@
 
 using namespace std;
 
+//Constructor function:
+
+class Book {
+public:
+    string title;
+    string author;
+    int pages;
+
+    Book() {
+    title = "No title";
+    author = "No author";
+    pages = 0;
+    }
+
+    Book(string aTitle,string aAuthor,int aPages) {
+        title = aTitle;
+        author = aAuthor;
+        pages = aPages;
+    }
+};
+
+int main() {
+
+    Book book1("Harry Porter","JK Rowling",5000);
+    Book book2("Lord of the ring","Tolkein",7000);
+    Book book3;
+    cout<< book1.title<<endl;
+    book1.title = "Harry Porter 1";
+    cout<<book1.title<<endl;
+    cout<<book2.title<<endl;
+    cout<<book3.title<<endl;
+return 0;
+}
+
+/*
 //Classes & Object:
 class Book {
 public:
     string title;
     string author;
-    string pages;
+    int pages;
 
 };
 
 int main() {
-
+    //book1 is intances of book class
     Book book1;
     book1.title = "Harry Porter";
     book1.author = "JK Rowling";
@@ -29,7 +64,6 @@ int main() {
 return 0;
 }
 
-/*
 //Pointer:
 int main() {
 int age = 19;
