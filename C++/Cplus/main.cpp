@@ -3,6 +3,33 @@
 
 using namespace std;
 
+//Classes & Object:
+class Book {
+public:
+    string title;
+    string author;
+    string pages;
+
+};
+
+int main() {
+
+    Book book1;
+    book1.title = "Harry Porter";
+    book1.author = "JK Rowling";
+    book1.pages = 5000;
+
+    Book book2;
+    book2.title = "Lord of the ring";
+    book2.author = "Tolkein";
+    book2.pages = 7000;
+
+    cout<< book1.title<<endl;
+    cout<<book2.title<<endl;
+return 0;
+}
+
+/*
 //Pointer:
 int main() {
 int age = 19;
@@ -13,17 +40,16 @@ string name = "Max";
 string *pName = &name;
 
 int agecopy = age;
-cout<< &agecopy<<endl;
-cout<< &age<<endl;
+cout<< &agecopy<<endl; //Return 0x28fe94
+cout<< &age<<endl; //Return 0x28febc
 agecopy = 20;
-cout<<agecopy<<endl;
-cout<<&agecopy<<endl;
+cout<<agecopy<<endl; //20
+cout<<&agecopy<<endl; // 0x28fe94
 
 cout<< "The memory address "<< pAge<< " contain the value of "<<*pAge;
 
 }
 
-/*
 //Array and nested loop:
 int main() {
     int numberGrid[2][2] = {
