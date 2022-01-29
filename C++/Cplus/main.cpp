@@ -3,6 +3,26 @@
 
 using namespace std;
 
+//Array and nested loop:
+
+int main() {
+    int numberGrid[2][2] = {
+        {1,2},
+        {3,4}
+    };
+
+    for(int i= 0;i<2;i++) {
+        for(int j = 0;j<2;j++) {
+    cout<< numberGrid[i][j];
+        }
+        cout<<endl;
+    }
+
+return 0;
+}
+
+
+/*
 //Exponent function:
 int power(int baseNum,int powerNum) {
     int result=1;
@@ -18,7 +38,6 @@ int main() {
 return 0;
 }
 
-/*
 //For loop:
 int main() {
 
