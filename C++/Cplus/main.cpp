@@ -2,9 +2,40 @@
 #include <cmath>
 
 using namespace std;
+//Object function:
+class Student {
+public:
+    string name;
+    string major;
+    double gpa;
+    Student(string aName,string aMajor, double aGpa) {
+        name = aName;
+        major = aMajor;
+        gpa = aGpa;
+    }
 
+        bool hasHonors() {
+        if(gpa>=3.5) {
+            return true;
+        }
+        else {
+        return false;
+        }
+            }
+};
+
+int main() {
+    Student student1("Jame","Data Science",3.9);
+    Student student2("Dumb","Graphic Designer",2.5);
+
+    cout<<student1.hasHonors()<<endl;
+    cout<<student2.hasHonors()<<endl;
+
+return 0;
+}
+
+/*
 //Constructor function:
-
 class Book {
 public:
     string title;
@@ -37,7 +68,6 @@ int main() {
 return 0;
 }
 
-/*
 //Classes & Object:
 class Book {
 public:
