@@ -2,7 +2,21 @@
 #include <cmath>
 
 using namespace std;
+//While loop:
 
+
+int main() {
+
+int index = 1;
+while(index <=5) {
+    cout<<index<<endl;
+    index++;
+}
+
+return 0;
+}
+
+/*
 //Switch statement:
 string getDayOfWeek(int dayNum) {
     string dayName;
@@ -44,7 +58,6 @@ cout<< getDayOfWeek(1);
 return 0;
 }
 
-/*
 <<<<<<< HEAD
 //Build a better calculator:
 int main() {
