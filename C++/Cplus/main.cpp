@@ -3,8 +3,28 @@
 
 using namespace std;
 
-//Array and nested loop:
+//Pointer:
+int main() {
+int age = 19;
+int *pAge = &age; //Assign value address to variable
+double gpa = 4.7;
+double *pGpa=&gpa;
+string name = "Max";
+string *pName = &name;
 
+int agecopy = age;
+cout<< &agecopy<<endl;
+cout<< &age<<endl;
+agecopy = 20;
+cout<<agecopy<<endl;
+cout<<&agecopy<<endl;
+
+cout<< "The memory address "<< pAge<< " contain the value of "<<*pAge;
+
+}
+
+/*
+//Array and nested loop:
 int main() {
     int numberGrid[2][2] = {
         {1,2},
@@ -21,8 +41,6 @@ int main() {
 return 0;
 }
 
-
-/*
 //Exponent function:
 int power(int baseNum,int powerNum) {
     int result=1;
