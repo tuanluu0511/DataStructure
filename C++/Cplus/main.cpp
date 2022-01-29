@@ -3,8 +3,39 @@
 
 using namespace std;
 
+//Build a better calculator:
+int main() {
+
+    int num1,num2;
+    char op;
+
+    cout<<"Enter the first number: ";
+    cin>> num1;
+    cout<<"Enter operator: ";
+    cin>> op;
+    cout<<"Enter the second number: ";
+    cin>> num2;
+    int result;
+    if(op == '+') {
+        result = num1 + num2;
+    } else if(op == '-') {
+        result = num1 - num2;
+    } else if(op == '*') {
+        result = num1 * num2;
+    } else if(op == '/') {
+        result = num1 / num2;
+    } else {
+        cout<< "Invalid operator";
+    };
+    cout<<result;
+
+    return 0;
+}
+
+/*
 int getMax(int num1, int num2, int num3) {
     int result;
+    //Or if(num1>=num2 && num1>=num3) {result=num1}
     if(num1>num2) {
         result = num1;
         if(result>num3) {
@@ -32,7 +63,6 @@ int main() {
 return 0;
 }
 
-/*
 //If statements
 
 int main()
