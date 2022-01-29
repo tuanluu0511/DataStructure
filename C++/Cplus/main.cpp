@@ -2,6 +2,39 @@
 #include <cmath>
 
 using namespace std;
+//Inheritance:
+class Chef {
+public:
+    void makeChiken() {
+    cout<<"The chef makes yummy chicken dish"<<endl;
+    }
+    void makeSalad() {
+    cout<<"The chef makes salad"<<endl;
+    }
+    void makeSpecialDish() {
+    cout<<"The chef makes bbq ribs"<<endl;
+    }
+};
+
+class ItalianChef: public Chef {
+public:
+    void makePasta() {
+    cout<<"The chef makes Pasta"<<endl;
+    }
+    void makeSpecialDish() {
+    cout<<"The chef makes shrime bbq"<<endl;
+    }
+};
+
+int main() {
+Chef chef;
+ItalianChef italianChef;
+chef.makeChiken();
+italianChef.makeSpecialDish();
+return 0;
+}
+
+/*
 //Getters & Setter:
 class Movie {
 private:
@@ -33,7 +66,6 @@ int main() {
 return 0;
 }
 
-/*
 //Object function:
 class Student {
 public:
