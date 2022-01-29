@@ -3,6 +3,7 @@
 
 using namespace std;
 
+<<<<<<< HEAD
 //Build a better calculator:
 int main() {
 
@@ -36,6 +37,10 @@ int main() {
 int getMax(int num1, int num2, int num3) {
     int result;
     //Or if(num1>=num2 && num1>=num3) {result=num1}
+=======
+int getMax(int num1, int num2, int num3) {
+    int result;
+>>>>>>> 2024dcdbb869159ebb8223e530b5885ac72d8f3f
     if(num1>num2) {
         result = num1;
         if(result>num3) {
@@ -63,6 +68,10 @@ int main() {
 return 0;
 }
 
+<<<<<<< HEAD
+=======
+/*
+>>>>>>> 2024dcdbb869159ebb8223e530b5885ac72d8f3f
 //If statements
 
 int main()
