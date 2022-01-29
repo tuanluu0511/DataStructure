@@ -2,6 +2,38 @@
 #include <cmath>
 
 using namespace std;
+//Getters & Setter:
+class Movie {
+private:
+    string rating;
+public:
+    string title;
+    string director;
+    Movie(string aTitle,string aDirector, string aRating) {
+        title = aTitle;
+        director=aDirector;
+        setRating(aRating);
+    }
+    void setRating(string aRating) {
+        if(aRating == "P" || aRating =="PG"||aRating=="PG-13"||aRating=="R")
+    {
+        rating = aRating;
+    } else {
+    rating="NR";
+    }
+    }
+    string getRating(){
+    return rating;}
+};
+int main() {
+    Movie avenger("Avenger","Jame Hopskin","PG");
+    avenger.setRating("P");
+    cout<<avenger.getRating();
+
+return 0;
+}
+
+/*
 //Object function:
 class Student {
 public:
@@ -21,7 +53,7 @@ public:
         else {
         return false;
         }
-            }
+        }
 };
 
 int main() {
@@ -34,7 +66,6 @@ int main() {
 return 0;
 }
 
-/*
 //Constructor function:
 class Book {
 public:
