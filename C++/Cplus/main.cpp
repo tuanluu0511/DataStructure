@@ -3,8 +3,23 @@
 
 using namespace std;
 
-//For loop:
+//Exponent function:
+int power(int baseNum,int powerNum) {
+    int result=1;
+    for (int i = 0;i<powerNum;i++) {
+        result=result*baseNum;
+    }
+    return result;
+}
 
+int main() {
+    cout<< power(2,3);
+
+return 0;
+}
+
+/*
+//For loop:
 int main() {
 
    int nums[] = {2,3,4,5,6,7};
@@ -12,11 +27,9 @@ int main() {
     cout<<nums[i]<<endl;
    }
 
-
 return 0;
 }
 
-/*
 //Build a guessing game:
 int main() {
 int secretNum = 7;
