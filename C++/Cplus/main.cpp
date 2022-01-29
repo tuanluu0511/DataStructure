@@ -2,9 +2,30 @@
 #include <cmath>
 
 using namespace std;
+
+//Build a guessing game:
+int main() {
+int secretNum = 7;
+int guess;
+int guessCount = 5;
+
+while(secretNum != guess && guessCount > 0) {
+    cout<< "Enter guess number: ";
+    cin>>guess;
+    guessCount--;
+    cout<<"You have "<< guessCount << " times left"<<endl;
+}
+if(guessCount !=0) {
+    cout<<"You win";
+} else{
+    cout<<"you lose";
+}
+return 0;
+}
+
+
+/*
 //While loop:
-
-
 int main() {
 
 int index = 1;
@@ -16,7 +37,6 @@ while(index <=5) {
 return 0;
 }
 
-/*
 //Switch statement:
 string getDayOfWeek(int dayNum) {
     string dayName;
