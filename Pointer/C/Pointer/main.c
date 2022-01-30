@@ -1,8 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+    //Pointer as function argument - Call by reference
+    void Increment(int *p) {
+        *p=*p+1;
+    }
 int main()
 {
+    int a;
+    a = 10;
+    Increment(&a);
+    printf("%d\n",a);
+    /*
     int x =5;
     int* p = &x; //store address of x in p
     *p = 6;//reassign value of x
@@ -18,7 +26,6 @@ int main()
     printf("%d\n",x); //10
     **q = *p+2; //12 p stored address x, *p mean value of address x => x+2 =10;
     printf("%d\n",x);
-    /*
     //Pointer types, pointer arithmetic
     int a = 1025;
     int *p;
