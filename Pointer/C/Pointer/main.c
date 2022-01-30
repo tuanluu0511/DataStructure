@@ -1,6 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
-    //Pointer as function argument - Call by reference
+    //Pointers & Arrays
+    int main() {
+    int A[] = { 2,4,5,8,1};
+    int i;
+    int *p=A;
+    p++; //Cant use A++
+    for(i=0;i<5;i++)
+    {
+        printf("Address = %d\n", A+i);//Address of 1st element
+        printf("Address = %d\n", &A[i]);//address
+        printf("Value = %d\n", *(A+i));//Value
+        printf("Value = %d\n", A[i]);//Value
+    }
+    }
+/*  //Pointer as function argument - Call by reference
     void Increment(int *p) {
         *p=*p+1;
     }
@@ -8,8 +22,8 @@ int main()
 {
     int a;
     a = 10;
-    Increment(&a);
-    printf("%d\n",a);
+    Increment(&a);//call by reference
+    printf("%d\n",a); */
     /*
     int x =5;
     int* p = &x; //store address of x in p
@@ -56,6 +70,6 @@ int main()
     printf("%d\n",p);
     printf("%d\n",*p); //*p - value of address pointed by p
     printf("%d\n",&a);
-    */
     return 0;
 }
+    */
