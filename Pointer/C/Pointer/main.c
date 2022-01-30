@@ -3,6 +3,23 @@
 
 int main()
 {
+    int x =5;
+    int* p = &x; //store address of x in p
+    *p = 6;//reassign value of x
+    int **q = &p; //assign address of p in q
+    int ***r = &q; //assign address of q in r
+    printf("%d\n",p); //address x
+    printf("%d\n",*p); //6 value of x
+    printf("%d\n",*q); //value stored in q(value of p = address of x)
+    printf("%d\n",**q); // 6 (value of value store in q)
+    printf("%d\n",**r); // r = address of q,*r = value store in address q(address of p)
+    printf("%d\n",***r); // 6
+    ***r=10; //Reassign value at address of x(value of x)
+    printf("%d\n",x); //10
+    **q = *p+2; //12 p stored address x, *p mean value of address x => x+2 =10;
+    printf("%d\n",x);
+    /*
+    //Pointer types, pointer arithmetic
     int a = 1025;
     int *p;
     p=&a;
@@ -13,8 +30,7 @@ int main()
     p0=(char*)p;//typecasting
     printf("%d bytes\n",sizeof(char)); // 1 byte
     printf("%d, %d\n",p0,*p0); //address: 100, value: 1(take value of smallest byte from p: 00000001)
-printf("%d, %d\n",p0+1,*(p0+1);
-    /*
+    printf("%d, %d\n",p0+1,*(p0+1));//address: 101, value: 4 (00000100 from p)
     int a = 10;
     int* p = &a;
     //pointer arithmetic
