@@ -1,5 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
+//Arrays as function arguments
+int SumOfElement (int* A,int size) {
+    int sum=0;
+    for(int i=0;i<size;i++) {
+        sum += A[i]; //A[i] is *(A+i)
+    }
+    return sum;
+}
+
+void Double(int* A, int size) {
+int i;
+for(i=0;i<size;i++) {
+    A[i] = 2*A[i];
+}
+}
+
+int main() {
+    int A[] = { 1,2,3,4,5};
+    int size = sizeof(A)/sizeof(A[0]);
+    int total = SumOfElement(A,size);//A can be used for &A[0]
+    printf("Total: %d\n",total);
+
+    Double(A,size);
+    for(int i=0;i<size;i++) {
+        printf("%d\n",A[i]);
+    }
+    }
+
+
+
+/*
     //Pointers & Arrays
     int main() {
     int A[] = { 2,4,5,8,1};
@@ -14,7 +45,7 @@
         printf("Value = %d\n", A[i]);//Value
     }
     }
-/*  //Pointer as function argument - Call by reference
+  //Pointer as function argument - Call by reference
     void Increment(int *p) {
         *p=*p+1;
     }
