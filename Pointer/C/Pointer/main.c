@@ -1,5 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+//Character arrays and pointers
+
+void print(char* C) {
+    //We can pass "const char* C" to not allowed to change the input array
+    //int i=0;
+    //while(*(C+i)!= '\0') {
+    //  printf("%c",C[i]); //*(C+i) = C[i]
+    // i++
+    //}
+    while(*C != '\0') {
+        printf("%c",*C);
+        C++;
+    }
+    printf("\n");//Print all the character in the array
+}
+
+int main() {
+    char C[20] = "Hello";//String get stored in the space for array
+    //char *C ="Hello"; same result but cant modify element in array
+    //C[0]=A;
+    print(C);
+}
+/*
+int main() {
+//char A[5];
+//A[0]= 'J';
+//A[1]= 'O';
+//A[2]= 'N';
+//A[3]= 'H';
+//A[4]= '\0';
+//char A[] = "JOHN";
+char A[5] = {'J','O','N','H','\0'}; //Same as above 2
+int len = strlen(A);
+printf("%d\n",len);//4
+printf("%s",A); //JOHN
+}
+
 //Arrays as function arguments
 int SumOfElement (int* A,int size) {
     int sum=0;
@@ -20,17 +58,13 @@ int main() {
     int A[] = { 1,2,3,4,5};
     int size = sizeof(A)/sizeof(A[0]);
     int total = SumOfElement(A,size);//A can be used for &A[0]
-    printf("Total: %d\n",total);
+    printf("Total: %d\n",total);//15
 
     Double(A,size);
     for(int i=0;i<size;i++) {
-        printf("%d\n",A[i]);
+        printf("%d",A[i]);//2 4 6 8 10
     }
     }
-
-
-
-/*
     //Pointers & Arrays
     int main() {
     int A[] = { 2,4,5,8,1};
