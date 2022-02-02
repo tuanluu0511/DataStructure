@@ -1,21 +1,70 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdlib.h>
+int compare(const void* a,const void *b) {
+    int A = *((int*)a); //type casting to int* and getting value
+    int B= *((int*)b);
+    return abs(A)-abs(B);
+}
+
+int main() {
+    int i, A[] = {-31,22,-1,50,-5,4};
+    qsort(A,6,sizeof(int),compare);
+    for (i=0;i<6;i++) printf("%d ", A[i]);
+}
+/*
+//Function pointer and call back:
+int compare(int a,int b) {
+    if(a>b) return 1; //-1 if decrease soft
+    return -1;
+}
+void BubbleSort(int *A,int n,int (*compare)(int,int)) {
+    int i,j,temp;
+    for(i=0;i<n;i++)
+        for(j=0; j<n-1; j++) {
+            if(compare(A[j],A[j+1]) > 0) {
+                temp = A[j];
+                A[j] = A[j+1];
+                A[j+1] = temp;
+            }
+        }
+    }
+
+int main() {
+    int i,A[]={3,2,1,5,6,4};
+    BubbleSort(A,6,compare);
+    for(i=0;i<6;i++) printf("%d ",A[i]);
+}
+
+void A() {
+printf("Hello");
+}
+void B(void (*ptr)()) //function pointer
+{
+    ptr ();//call-back function that "p" point to
+}
+
+int main() {
+    //void (*p)()=A;
+    //B(p);
+    B(A); //A is callback function
+}
 //Function pointer
 int Add(int a,int b) {
 return a+b;
 }
-
+int *Func(int,int);//declaring a function that would return int*
+int (*Func)(int,int);//declaring a function pointer
 int main() {
     int c;
     //pointer to function should take
     //(int, int) as argument/parameter and return int
     int (*p)(int,int);
-    p=&Add;
-    c=*p(2,3);
+    p=&Add;//or p=Add;
+    c=*p(2,3);// or p(2,3)
     printf("%d",c);
 }
-/*
 //Pointer as function return
 void PrintHelloWold() {
     printf("Hello World\n");
