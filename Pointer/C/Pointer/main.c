@@ -1,6 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+//Pointer as function return
+void PrintHelloWold() {
+    printf("Hello World\n");
+}
+
+int Add(int* a, int* b) {
+int* c = (int*)malloc(sizeof(int));
+*c = *a+*b;
+return c;
+}
+
+int main() {
+int a=2,b=4;
+int* ptr = Add(&a,&b);
+PrintHelloWold();
+printf("%d",*ptr);
+
+}
+/*
 //Pointer and dynamic memories:
 int main() {
 int a; //goes on stack
@@ -11,9 +30,6 @@ free(p);
 p=(int*)malloc(20*sizeof(int));//Take memory for array
 
 }
-
-
-/*
 //Pointers and multi-dimensional arrays
 void Func(int (*A)[2][2]) {
 //or A[][2][2]
