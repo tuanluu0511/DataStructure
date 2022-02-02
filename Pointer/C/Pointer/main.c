@@ -1,17 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+//Function pointer
+int Add(int a,int b) {
+return a+b;
+}
+
+int main() {
+    int c;
+    //pointer to function should take
+    //(int, int) as argument/parameter and return int
+    int (*p)(int,int);
+    p=&Add;
+    c=*p(2,3);
+    printf("%d",c);
+}
+/*
 //Pointer as function return
 void PrintHelloWold() {
     printf("Hello World\n");
 }
-
 int Add(int* a, int* b) {
 int* c = (int*)malloc(sizeof(int));
 *c = *a+*b;
 return c;
 }
-
 int main() {
 int a=2,b=4;
 int* ptr = Add(&a,&b);
@@ -19,7 +32,6 @@ PrintHelloWold();
 printf("%d",*ptr);
 
 }
-/*
 //Pointer and dynamic memories:
 int main() {
 int a; //goes on stack
