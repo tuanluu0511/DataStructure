@@ -1,6 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+//Pointers and multi-dimensional arrays
+void Func(int (*A)[2][2]) {
+//or A[][2][2]
+}
+int main() {
+    int C[3][2][2] = {{{2,5},{7,9}},
+    {{3,4},{6,1}},
+    {{0,8},{11,13}}
+    };
+    printf("%d %d %d %d\n",C,*C, C[0],&C[0][0]);
+    printf("%d\n",*(C[0][0]+1));
+
+}
+
+
+/*
 //Character arrays and pointers
 
 void print(char* C) {
@@ -23,7 +39,6 @@ int main() {
     //C[0]=A;
     print(C);
 }
-/*
 int main() {
 //char A[5];
 //A[0]= 'J';
