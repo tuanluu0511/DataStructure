@@ -1,6 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+//Pointer and dynamic memories:
+int main() {
+int a; //goes on stack
+int *p;
+p=(int*)malloc(sizeof(int));//Take 4 bytes on heap and assign address to p
+*p=10;//Store value in heap
+free(p);
+p=(int*)malloc(20*sizeof(int));//Take memory for array
+
+}
+
+
+/*
 //Pointers and multi-dimensional arrays
 void Func(int (*A)[2][2]) {
 //or A[][2][2]
@@ -11,12 +24,9 @@ int main() {
     {{0,8},{11,13}}
     };
     printf("%d %d %d %d\n",C,*C, C[0],&C[0][0]);
-    printf("%d\n",*(C[0][0]+1));
+    printf("%d\n",*(C[0][0]+1));//5
 
 }
-
-
-/*
 //Character arrays and pointers
 
 void print(char* C) {
